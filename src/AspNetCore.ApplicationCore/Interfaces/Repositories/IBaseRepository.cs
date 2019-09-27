@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using AspNetCore.ApplicationCore.Entities;
 
 namespace AspNetCore.ApplicationCore.Interfaces.Repositories
 {
-    public interface IBaseRepository<T> : IDisposable where T : class
+    public interface IBaseRepository<T> : IDisposable where T : BaseEntity
     {
         Task<T> Post(T entity);
         Task PostAll(List<T> entities);

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AspNetCore.ApplicationCore\AspNetCore.ApplicationCore.csproj" />
+    <ProjectReference Include="..\AspNetCore.Services\AspNetCore.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>

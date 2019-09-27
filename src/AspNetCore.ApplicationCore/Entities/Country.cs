@@ -2,12 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AspNetCore.ApplicationCore.Entities
 {
-    public class Country
+    public class Country : BaseEntity
     {
-        [Key]
-        [Display(Name="Código")]
-        public long ContryId { get; set; }
-
         [Display(Name="Nome")]
         [Required(ErrorMessage="O campo {0} é obrigatório.")]
         [StringLength(60, MinimumLength=3, ErrorMessage="O campo {0} deve conter entre {2} e {1} caracteres.")]

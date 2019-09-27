@@ -1,4 +1,5 @@
-﻿using AspNetCore.Infrastructure.Data;
+﻿using AspNetCore.Infrastructure.CrossCutting.IoC;
+using AspNetCore.Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,6 +30,8 @@ namespace AspNetCore.WebApp
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            NativeInjectorContainer.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
