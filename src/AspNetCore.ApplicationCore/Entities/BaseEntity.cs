@@ -12,11 +12,11 @@ namespace AspNetCore.ApplicationCore.Entities
         [Display(Name="Cadastro")]
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString ="{0:dd/MM/yyyy HH:mm:ss}")]
-        public DateTime Created { get; set; }
+        public DateTime? Created { get; set; }
 
         [Display(Name="Atualizado")]
         [DataType(DataType.DateTime)]
         [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString ="{0:dd/MM/yyyy HH:mm:ss}")]
-        public DateTime Updated { get; set; }
+        public DateTime? Updated { get; set; }
     }
 }

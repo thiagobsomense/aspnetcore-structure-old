@@ -48,7 +48,7 @@ namespace AspNetCore.Services.Services
             return await _repository.GetId(id);
         }
 
-        public async Task<T> Post(T entity)
+        public virtual async Task<T> Post(T entity)
         {
             entity.Created = DateTime.Now;
             entity.Updated = DateTime.Now;
@@ -57,7 +57,7 @@ namespace AspNetCore.Services.Services
             return entity;
         }
 
-        public async Task PostAll(List<T> entities)
+        public virtual async Task PostAll(List<T> entities)
         {
             //List<T> list = new List<T>();
 
@@ -72,7 +72,7 @@ namespace AspNetCore.Services.Services
             await _repository.PostAll(entities);
         }
 
-        public async Task<T> Put(T entity)
+        public virtual async Task<T> Put(T entity)
         {
             entity.Updated = DateTime.Now;
 
@@ -80,7 +80,7 @@ namespace AspNetCore.Services.Services
             return entity;
         }
 
-        public async Task PutAll(List<T> entities)
+        public virtual async Task PutAll(List<T> entities)
         {
             foreach(var item in entities)
             {
